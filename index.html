@@ -8,15 +8,34 @@
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
-    <model-viewer id="model" src="./models/orange.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
-        <button id="change-colour" class="Hotspot" slot="hotspot-1" data-position="0.24462271005400027m 0.927094956884221m -0.27987364024726524m" data-normal="-0.3293704410321221m 0.436550608196851m 0.8372208066318377m" data-visibility-attribute="visible">
-            <div class="HotspotAnnotation">Change Colour</div>
-        </button>
-    </model-viewer>
-    <div id="model-info">
-        Info about the model
-    </div>
-    
+    <model-viewer src="./models/chair.glb"
+              alt="A 3D model of a chair"
+              ar
+              auto-rotate
+              camera-controls></model-viewer>
+    <model-viewer src="chair-aero.glb" 
+                ar ar-modes="webxr scene-viewer quick-look" 
+                camera-controls poster="./images/poster.png"
+                shadow-intensity="0.85" exposure="0.95" 
+                shadow-softness="0.99"> </model-viewer>
+
+    <model-viewer src="./models/chair-export.glb"
+              alt="A 3D model of a chair"
+              ar
+              auto-rotate
+              camera-controls></model-viewer>
+    <model-viewer src="./models/chair-aero.glb"
+              alt="A 3D model of a chair"
+              ar
+              auto-rotate
+              camera-controls></model-viewer>              
+    <model-viewer class="larger-example" src="./models/chair-aero.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="0.85" exposure="0.95" shadow-softness="0.99">
+                <button class="Hotspot" slot="hotspot-1" data-position="-0.6182989537587867m 1.143372374710182m -0.12490057744144456m" data-normal="0.8973512874623126m 0.3089969860856231m 0.3150897165566202m" data-visibility-attribute="visible">
+                    <div class="HotspotAnnotation">Solid wood frame
+                    </div>
+                </button><button class="Hotspot" slot="hotspot-2" data-position="-0.13189463915885075m 0.6504015767558957m -0.3052344187515641m" data-normal="-0.007746660481446617m 0.9996602997529233m 0.024885223512777922m" data-visibility-attribute="visible">
+                    <div class="HotspotAnnotation">Available in 3 colours</div>
+                </button>
+            </model-viewer>
 </body>
-<script src="js/script.js"></script>
 </html>
