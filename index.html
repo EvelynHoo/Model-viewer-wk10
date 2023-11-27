@@ -8,6 +8,21 @@
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
+    <model-viewer src="sofa-model.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
+        <button class="Hotspot" slot="hotspot-1" data-position="0.23257858199045708m 0.6935917602697417m -0.1866782678274399m" data-normal="0.1893307400944865m 0.39246459203136425m 0.9000696722237279m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">leather</div>
+        </button>
+        <div class="progress-bar hide" slot="progress-bar">
+            <div class="update-bar"></div>
+        </div>
+        <button slot="ar-button" id="ar-button">
+            View in your space
+        </button>
+        <div id="ar-prompt">
+            <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+        </div>
+    </model-viewer>
+    
     <model-viewer src="./models/chair.glb"
               alt="A 3D model of a chair"
               ar
