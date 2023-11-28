@@ -20,7 +20,28 @@ header {
     background-image: url('../images/1.webp'); /* Replace 'your-image-url.jpg' with the path to your image */
     background-size: cover;
     background-position: center;
-    color: white; /* Text color on top of the image */
+    font-size: 50px;
+    color: rgb(70, 55, 36); /* Text color on top of the image */
     text-align: center;
     padding: 100px; /* Adjust padding to suit your design */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.model-viewer-container {
+    display: flex;
+    width: 100vw; /* 100% of the viewport width */
+    height: 100vh; /* 100% of the viewport height */
+}
+
+.model-viewer {
+    flex: 1; /* Each viewer takes an equal portion of the available space */
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
