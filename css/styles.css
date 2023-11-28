@@ -27,6 +27,10 @@
     width: 350px;
 }
 @media (max-width: 768px) {
+    .model-viewer-container {
+        flex-direction: column; /* Display models in a column */
+    }
+
     .model-viewer-wrapper {
         width: 100%; /* Full width for smaller screens */
     }
