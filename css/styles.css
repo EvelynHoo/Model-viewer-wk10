@@ -1,75 +1,59 @@
 .Hotspot {
     background-color: #ffffff;
-    color: rgb(9, 47, 34);
+    color: rgb(70, 55, 36);
     border-radius: 3px;
     padding: 3px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.larger-example {
-    width: 600px;
-    height: 500px;
-    background-color: rgb(208, 198, 182);
-}
-
-#model-info {
-    display: none;
-}
-
-.visible {
-    display: block;
-}
-
 .Hotspot:hover{
-    background-color: rgb(226, 172, 97);
+    color: rgb(70, 55, 36);
+    background-color: rgb(220, 157, 81);
 }
 
-/* .HotspotAnnotation{
-    display:none;
-    position: absolute;
-    background-color: aqua;
-    color: #e91111;
-    padding: 8px;
-    border-radius: 5px;
-    font-size: 14px;
-} */
+.model-viewer-container {
+    display: flex;
+    flex-wrap: nowrap; /* Ensure models stay on the same row */
+    justify-content: space-around; /* Evenly distribute models along the row */
+    overflow-x: auto; /* Allow horizontal scrolling if models don't fit on the screen */
+}
+
+.model-viewer-wrapper {
+    flex: 0 0 auto; /* Each viewer takes its content size, not equal portions */
+    margin: 10px; /* Optional margin between viewers */
+    box-sizing: border-box;
+    text-align: center;
+    width: 350px;
+}
+@media (max-width: 768px) {
+    .model-viewer-wrapper {
+        width: 100%; /* Full width for smaller screens */
+    }
+}
+
+model-viewer {
+    width: 100%; /* Ensure the model viewer takes 100% of the wrapper width */
+    height: 400px; /* Adjust the height to your desired value */
+}
+
+h2, h3 {
+    margin: 5px 0;
+    color: rgb(70, 55, 36); 
+}
 
 header {
-    background-image: url('../images/1.webp'); /* Replace 'your-image-url.jpg' with the path to your image */
+    background-image: url('../images/1.webp');
     background-size: cover;
     background-position: center;
     font-size: 50px;
-    color: rgb(70, 55, 36); /* Text color on top of the image */
+    color: rgb(70, 55, 36);
     text-align: center;
-    padding: 100px; /* Adjust padding to suit your design */
+    padding: 100px;
 }
 
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-.model-viewer-container {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100vw; /* 100% of the viewport width */
-    height: 100vh; /* 100% of the viewport height */
-}
-
-.model-viewer-wrapper {
-    flex: 1; /* Each viewer takes an equal portion of the available space */
-    margin: 10px; /* Optional margin between viewers */
-    box-sizing: border-box;
-    text-align: center;
-}
-
-model-viewer {
-    width: 100%; /* Ensure the model viewer takes 100% of the wrapper width */
-}
-
-h2, h3 {
-    margin: 5px 0;
-    color: rgb(70, 55, 36); 
 }

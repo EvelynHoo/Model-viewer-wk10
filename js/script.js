@@ -9,7 +9,7 @@ document.getElementById("change-colour").addEventListener("click", function() {
 });
 
 // example with multiple models
-var myModels = ["/models/orange.glb", "/models/teal.glb", "/models/orange.glb", "/models/teal.glb",]
+var myModels = ["./models/chair-model.glb", "./models/sofa-model.glb", "./models/vase-model.glb", ]
 var counter = 0;
 document.getElementById("change-colour").addEventListener("click", function() {
     counter++;
@@ -18,3 +18,4 @@ document.getElementById("change-colour").addEventListener("click", function() {
     }
     document.getElementById("model").src = myModels[counter];
 });
+
